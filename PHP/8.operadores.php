@@ -170,8 +170,8 @@ $y=array("b" => "green","a" => "10" );
 //OPERADOR TERNARIO
 //echo $status = (empty($user)) ? "anónimo" : 'sesión iniciada y $user no esta vacia y es igual a '. $user;
 
-OPERADOR FUSIÓN NULA
-variable $color es "rojo" if $color does not exist or is null
+//OPERADOR FUSIÓN NULA
+//variable $color es "rojo" if $color does not exist or is null
 $color="blue";
 //echo $color = $color ?? "rojo";
 

@@ -21,8 +21,8 @@
 *=
 /=
 -- */
-$numero = 13;
-// $numeros = 13;
+$numero = 15;
+// $numeros = 15;
 $numero5 = 5;
 // $numero = $numero + $numero5;
 $numero += $numero5;

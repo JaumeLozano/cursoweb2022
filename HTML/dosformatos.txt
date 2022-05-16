@@ -1,0 +1,23 @@
+03/03/2022
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+#Párrafo1 {
+color:  blue;
+text-align: right;
+}
+#Párrafo2 {
+color:  green;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<p id="Párrafo1">La guerra de Ucrania y la censura han terminado con un referente del periodismo liberal en Rusia</p>
+<p2 id="Párrafo2">El cierre fue confirmado por su director, el veterano periodista Alexéi Venedíktov.</p2>
+</body>
+</html>

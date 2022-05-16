@@ -21,7 +21,7 @@
 *=
 /=
 -- */
-$numero = 10;
+$numero = 13;
 // $numeros = 13;
 $numero5 = 5;
 // $numero = $numero + $numero5;

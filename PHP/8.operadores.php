@@ -125,8 +125,8 @@ xor
 -- */
 $numero = 21;
 
-// if ($numero >= 10 or $numero > 20 and $numero > 1) {
-// 	echo "Se cumple toda la condición";
+if ($numero >= 10 or $numero > 20 and $numero > 1) {
+echo "Se cumple toda la condición";
 // }
 // else{
 //     echo "No se cumple la condición";

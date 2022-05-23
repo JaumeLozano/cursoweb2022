@@ -9,7 +9,7 @@
 // $x = 15;
 // while($x > 3){
 // 	echo $x . '<br>';
-// 	$x--;
+// 	$x--; (el decremento se escribe así)
 // }
 //Quiero mostrar del 3 al 13
 $x = 2;

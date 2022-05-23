@@ -11,7 +11,7 @@ echo substr($saludo, 5, strlen($saludo));
 // echo substr($texto, 0, 4); //Recorta la cadena de texto en este caso del primer string hasta el quinto. Podriamos almacenarlo en otra variable
 // echo strtoupper($texto); //Convierte a mayúsculas
 // echo strtolower($texto); //Convierte a minúsculas
-// echo strpos($texto, 'n'); //Posición del string
+echo strpos($texto, 'dr'); //Posición del string
 // echo strrev($texto);  //Invierte el texto
 // $nuevoTexto = str_replace("Andreu", "siau", $texto); //Sustituye textos
 // // echo $nuevoTexto;

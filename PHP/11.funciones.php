@@ -1,24 +1,23 @@
 <?php 
-
 /* FUNCIONES INTEGRADAS
 count();
 sort();
 rsort();
 var_dump();
 print_r();
-
 + de 1000 funciones
 https://www.w3schools.com/php/php_ref_overview.asp
 */
-
 // FUNCIONES DEFINIDAS POR EL USUARIO
 #Con un solo parámetro
+function saludo($nombre){
+	return 'Saludo, ' . $nombre;
+}
 
-// function saludo($nombre){
-// 	return 'Saludo, ' . $nombre;
-// }
-
-
+echo saludo('Angel') . '<br />';
+echo saludo('Fernando') . '<br />';
+echo saludo('Rafael') . '<br />';
+echo saludo('Manuel') . '<br />';
 // echo saludo('Angel') . '<br />';
 // echo saludo('Fernando') . '<br />';
 // echo saludo('Rafael') . '<br />';
@@ -26,11 +25,17 @@ https://www.w3schools.com/php/php_ref_overview.asp
 
 #Con dos parámetros
 
+// function sumar($numero1, $numero2){
+// 	$resultado = $numero1 + $numero2;
+// 	return $resultado;
+// }
 function sumar($numero1, $numero2){
 	$resultado = $numero1 + $numero2;
 	return $resultado;
 }
 
-echo $resultado = sumar(10, 15); // le damos el valor de la suma al llamar la función 
+// $resultado = sumar(10, 15);
+$resultado = sumar(10, 15); //Le damos el valor de la suma al llamar la función
+echo $resultado; //Mostramos el valor en pantalla
 
-?>
+?> 

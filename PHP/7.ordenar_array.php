@@ -10,9 +10,9 @@ foreach($meses as $mes){
 	echo '<li>' . $numero . '</li>';
  }
 
-// $numeros = array(1, 22, 23, 10, 9, 5, 70, 100, 20);
+$numeros = array(1, 22, 23, 10, 9, 5, 70, 100, 20);
 
-// rsort($numeros);
+rsort($numeros);
 // sort($meses); //Función del array que queremos ordenar
 // // rsort($meses); Inverso del array
 // // rsort($numeros);
@@ -25,8 +25,19 @@ foreach($meses as $mes){
 // rsort($díasdelasemana);
 // echo implode("<br>",$díasdelasemana);
 
+$meses = array('Enero', 'Febrero', 'Marzo', 'Abril', 
+	'Mayo', 'Junio', 'Julio', 'Agosto',
+	'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
 
+foreach($meses as $mes){
+	echo '<li>' . $mes . '</li>';
+ }
 
+$numeros = array(1, 22, 23, 10, 9, 5, 70, 100, 20);
+rsort($numeros);
+foreach($numeros as $numero){
+    echo '<li>' . $numero . '<li>';
+}
 // ?>
 // <!DOCTYPE html>
 // <html lang="en">

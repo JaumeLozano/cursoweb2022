@@ -18,5 +18,8 @@ $fecha = $_POST['fecha'];
 $terminos = $_POST['terminos'];
 
 echo 'Hola ' . $nombre . ' eres ' . $sexo . ' y has escogido la fecha: '. $fecha ;
+echo 'Hola ' . $nombre . ' eres ' . $_POST['sexo'] . ' y has escogido la fecha: '. $fecha ;
+
+?> s
 
 ?> 

@@ -3,6 +3,9 @@
 // if($_POST){
 //     echo $_POST['nombre'];
 // }
+if(!$_GET) {
+    header('Location: http://localhost/cursoweb2022/PHP/UF1845formulari/recibe-get.php'); //Carpeta y archivo para rellenar el form correcto
+} 
 ?> -->
 <!DOCTYPE html>
 <html lang="es">
@@ -36,6 +39,7 @@
         <input type="submit" value="Enviar">
         <!-- Para enviar datos a la misma página se deja en blanco action o bien en vez de recibe el nombre del
         archivo actual ejemplo-form-index.php o bien <?php //echo htmlspecialchars($_SERVER['PHP_SELF']) ?> -->
+        echo '<br>Hola ' . $nombre . ' eres un ' . $sexo . ' y has escogido la fecha: '. $_GET['fecha'];
     </form>
 </body>
 </html>

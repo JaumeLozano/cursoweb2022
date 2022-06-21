@@ -36,7 +36,7 @@ if ($metodo == 'GET') {//Enviado mediante GET
 } else { //Enviado mediante POST
     if (isset($_POST['submit'])) {
         echo 'Se han enviado los datos correctamente, mediante POST <br>';
-        print_r($_POST['submit']);
+        print_r($_POST['submit']); //nos va mostrar 
         echo '<br>';
         print_r($_POST);
     }

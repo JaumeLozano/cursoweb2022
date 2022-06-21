@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="recibe-post.php" method="post"> <!-- con action le decimos donde guarda los datos -->
+    <form action="recibe-post.php" method="post"> <!-- con action le decimos donde guarda los datos // en este caso lo guarda en un archivo determinado si no hubiera nada en el mismo--> 
         <input type="text" placeholder="Nombre" name="nombre" id=""> <!-- el value lo define el usuario -->
         <input type="text" placeholder="Escribe aqui el nombre" name="nombre" id=""> <!-- el value lo define el usuario -->
         <br>

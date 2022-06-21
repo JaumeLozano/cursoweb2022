@@ -26,6 +26,8 @@ if (isset($_COOKIE['background-color'])) {
 	<style>
 		p {
 			background-color: <?php echo $background; ?>;
+			font-size: <?php echo $tamaño; ?>; 
+			color: <?php echo $color; ?>; 
 		}
 	</style>
 </head>

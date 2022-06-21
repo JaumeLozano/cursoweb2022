@@ -13,4 +13,4 @@ echo '<br /><a href="ejemplo2.php">Ejemplo 2</a>';
 
 // O quizás pasar el id de sesión, si fuera necesario
 // echo '<br /><a href="ejemplo2.php?' . SID . '">página 2</a>';
-?>
+?> 

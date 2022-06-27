@@ -1,0 +1,15 @@
+form {
+	width: 13%;
+	margin: 10px 0;
+	padding: 10px;
+	background: #fff;
+	overflow: hidden;
+	box-shadow: 0 0 3px grey;
+	border-top:10px solid #ffd500;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+	border-radius: 5px;
+}

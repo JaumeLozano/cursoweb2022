@@ -1,0 +1,164 @@
+Microsoft Windows [Versión 10.0.19044.1766]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\xampp\mysql\bin>show databases;
+"show" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\xampp\mysql\bin>mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 630
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| administración     |
+| imagineeringparis  |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| prueba_consola     |
+| test               |
++--------------------+
+8 rows in set (0.005 sec)
+
+MariaDB [(none)]> cd prueba_consola
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'cd prueba_consola' at line 1
+MariaDB [(none)]> prueba_consola;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'prueba_consola' at line 1
+MariaDB [(none)]> use prueb_consola;
+ERROR 1049 (42000): Unknown database 'prueb_consola'
+MariaDB [(none)]> use prueba_consola;
+Database changed
+MariaDB [prueba_consola]> show tables;
++--------------------------+
+| Tables_in_prueba_consola |
++--------------------------+
+| usuarios                 |
++--------------------------+
+1 row in set (0.001 sec)
+
+MariaDB [prueba_consola]> describe usuarios;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int(11)      | NO   | PRI | NULL    | auto_increment |
+| nombre | varchar(100) | NO   |     | NULL    |                |
+| email  | varchar(100) | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+3 rows in set (0.020 sec)
+
+MariaDB [prueba_consola]> EXIT
+Bye
+
+C:\xampp\mysql\bin>mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 631
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| administración     |
+| imagineeringparis  |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| prueba_consola     |
+| test               |
++--------------------+
+8 rows in set (0.001 sec)
+
+MariaDB [(none)]> CREATE_database_ejercicio_consola;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CREATE_database_ejercicio_consola' at line 1
+MariaDB [(none)]> CREATE_DATABASE ejercicio_consola;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CREATE_DATABASE ejercicio_consola' at line 1
+MariaDB [(none)]> CREATE DATABASE ejercicio_consola
+    -> M
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'M' at line 2
+MariaDB [(none)]> CREATE DATABASE ejercicio_consola;
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [(none)]>  use ejercicio_consola;
+Database changed
+MariaDB [ejercicio_consola]> CREATE TABLE clientes
+    -> (id INT AUTO_INCREMENT,
+    -> nombre VARCHAR (100) NOT NULL,
+    -> email VARCHAR(100) NOT NULL,
+    -> PRIMARY KEY (id));
+Query OK, 0 rows affected (0.088 sec)
+
+MariaDB [ejercicio_consola]> CREATE TABLE usuarios
+    -> (id INT AUTO_-INCREMENT,
+    -> nombre VARCHAR(199) NOT NULL,
+    -> exit
+    -> exit
+    -> exit;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-INCREMENT,
+nombre VARCHAR(199) NOT NULL,
+exit
+exit
+exit' at line 2
+MariaDB [ejercicio_consola]> CREATE TABLE productos
+    -> (id INT AUTO_INCREMENT,
+    -> nombre VARCHAR(100) NOT NULL,
+    -> email VARCHAR(100) NOT NULL,
+    -> PRIMARY KEY (id));
+Query OK, 0 rows affected (0.045 sec)
+
+MariaDB [ejercicio_consola]>  describe usuarios
+    -> ;
+ERROR 1146 (42S02): Table 'ejercicio_consola.usuarios' doesn't exist
+MariaDB [ejercicio_consola]> describe usuarios;
+ERROR 1146 (42S02): Table 'ejercicio_consola.usuarios' doesn't exist
+MariaDB [ejercicio_consola]> describe clientes;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int(11)      | NO   | PRI | NULL    | auto_increment |
+| nombre | varchar(100) | NO   |     | NULL    |                |
+| email  | varchar(100) | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+3 rows in set (0.020 sec)
+
+MariaDB [ejercicio_consola]> describe productos;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| id     | int(11)      | NO   | PRI | NULL    | auto_increment |
+| nombre | varchar(100) | NO   |     | NULL    |                |
+| email  | varchar(100) | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+3 rows in set (0.023 sec)
+
+MariaDB [ejercicio_consola]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

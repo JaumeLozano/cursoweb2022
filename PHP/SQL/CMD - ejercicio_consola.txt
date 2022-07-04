@@ -157,6 +157,178 @@ MariaDB [ejercicio_consola]>
 
 
 
+EJERCICIO 04-07
+Microsoft Windows [Versión 10.0.19044.1766]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\xampp\mysql\bin>mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 644
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| administración     |
+| ejercicio_consola  |
+| imagineeringparis  |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| prueba_consola     |
+| test               |
++--------------------+
+9 rows in set (0.001 sec)
+
+MariaDB [(none)]> use ejercicio_consola
+Database changed
+MariaDB [ejercicio_consola]> show talbes;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'talbes' at line 1
+MariaDB [ejercicio_consola]> show tables;
++-----------------------------+
+| Tables_in_ejercicio_consola |
++-----------------------------+
+| clientes                    |
+| productos                   |
++-----------------------------+
+2 rows in set (0.001 sec)
+
+MariaDB [ejercicio_consola]> INSERT INTO clientes VALUES (null, 'Pr0j3ct', 'Castelldefels’);
+Query OK, 1 row affected (0.012 sec)
+
+MariaDB [ejercicio_consola]> INSERT INTO clientes (codigo_cliente, empresa) VALUES (null, 'ETIF');
+ERROR 1054 (42S22): Unknown column 'codigo_cliente' in 'field list'
+MariaDB [ejercicio_consola]> INSERT INTO clientes (codigo_cliente, empresa) VALUES (null, 'ETIF');
+ERROR 1054 (42S22): Unknown column 'codigo_cliente' in 'field list'
+MariaDB [ejercicio_consola]> INSERT INTO clientes (codigo_cliente, empresa) VALUES (null, 'ETIF');
+ERROR 1054 (42S22): Unknown column 'codigo_cliente' in 'field list'
+MariaDB [ejercicio_consola]> SELECT * FROM CLIENTES
+    ->
+    ->
+    -> ;
++----+---------+---------------+
+| id | nombre  | email         |
++----+---------+---------------+
+|  1 | Pr0j3ct | Castelldefels |
++----+---------+---------------+
+1 row in set (0.000 sec)
+
+MariaDB [ejercicio_consola]> INTO clientes (codigo_clientes, empresa) VALUES (null,'ETIF');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INTO clientes (codigo_clientes, empresa) VALUES (null,'ETIF')' at line 1
+MariaDB [ejercicio_consola]> INSERT INTO clientes (codigo_clientes, empresa) VALUES (null,'ETIF');
+ERROR 1054 (42S22): Unknown column 'codigo_clientes' in 'field list'
+MariaDB [ejercicio_consola]> CREATE TABLE clientes (codigo_cliente INT AUTO_INCREMENT, empresa VARCHAR(100) NOT NULL,  direccion VARCHAR(100) NOT NULL, PRIMARY KEY (codigo_cliente));
+ERROR 1050 (42S01): Table 'clientes' already exists
+MariaDB [ejercicio_consola]> DELETE TABLE clientes
+    ->
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'TABLE clientes' at line 1
+MariaDB [ejercicio_consola]> DROP TABLE clientes
+    -> ;
+Query OK, 0 rows affected (0.028 sec)
+
+MariaDB [ejercicio_consola]> DROP TALBE usuarios
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'TALBE usuarios' at line 1
+MariaDB [ejercicio_consola]> DROP TABLE usuarios;
+ERROR 1051 (42S02): Unknown table 'ejercicio_consola.usuarios'
+MariaDB [ejercicio_consola]> show tables;
++-----------------------------+
+| Tables_in_ejercicio_consola |
++-----------------------------+
+| productos                   |
++-----------------------------+
+1 row in set (0.001 sec)
+
+MariaDB [ejercicio_consola]>
+MariaDB [ejercicio_consola]> DROP TABLE productos
+    -> ;
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [ejercicio_consola]> CREATE TABLE clientes (codigo_cliente INT AUTO_INCREMENT, empresa VARCHAR(100) NOT NULL,  direccion VARCHAR(100) NOT NULL, PRIMARY KEY (codigo_cliente));
+Query OK, 0 rows affected (0.054 sec)
+
+MariaDB [ejercicio_consola]> CREATE TABLE productos (codigo_articulo INT AUTO_INCREMENT, seccion VARCHAR(100) NOT NULL,  nombre_articulo VARCHAR(100) NOT NULL, PRIMARY KEY (codigo_articulo));
+Query OK, 0 rows affected (0.072 sec)
+
+MariaDB [ejercicio_consola]> INSERT INTO clientes VALUES (null, 'Pr0j3ct', 'Castelldefels’);
+Query OK, 1 row affected (0.009 sec)
+
+MariaDB [ejercicio_consola]> INSERT INTO clientes (codigo_cliente, empresa) VALUES (null, 'ETIF');
+Query OK, 1 row affected, 1 warning (0.008 sec)
+
+MariaDB [ejercicio_consola]> INSERT INTO clientes (codigo_cliente) VALUES (null);
+Query OK, 1 row affected, 2 warnings (0.006 sec)
+
+MariaDB [ejercicio_consola]>  show tables;
++-----------------------------+
+| Tables_in_ejercicio_consola |
++-----------------------------+
+| clientes                    |
+| productos                   |
++-----------------------------+
+2 rows in set (0.001 sec)
+
+MariaDB [ejercicio_consola]>  SELECT * FROM CLIENTES
+    -> ;
++----------------+---------+---------------+
+| codigo_cliente | empresa | direccion     |
++----------------+---------+---------------+
+|              1 | Pr0j3ct | Castelldefels |
+|              2 | ETIF    |               |
+|              3 |         |               |
++----------------+---------+---------------+
+3 rows in set (0.000 sec)
+
+MariaDB [ejercicio_consola]> INSERT INTO productos VALUES (null, 'electronica', 'portatil');
+Query OK, 1 row affected (0.010 sec)
+
+MariaDB [ejercicio_consola]> SELECT * FROM productos;
++-----------------+-------------+-----------------+
+| codigo_articulo | seccion     | nombre_articulo |
++-----------------+-------------+-----------------+
+|               1 | electronica | portatil        |
++-----------------+-------------+-----------------+
+1 row in set (0.003 sec)
+
+MariaDB [ejercicio_consola]> INSERT INTO productos (codigo_articulo, nombre_articulo) VALUES (null, 'movil');
+Query OK, 1 row affected, 1 warning (0.008 sec)
+
+MariaDB [ejercicio_consola]> INSERT INTO productos (codigo_articulo) VALUES (null);
+Query OK, 1 row affected, 2 warnings (0.005 sec)
+
+MariaDB [ejercicio_consola]> SELECT * FROM productos;
++-----------------+-------------+-----------------+
+| codigo_articulo | seccion     | nombre_articulo |
++-----------------+-------------+-----------------+
+|               1 | electronica | portatil        |
+|               2 |             | movil           |
+|               3 |             |                 |
++-----------------+-------------+-----------------+
+3 rows in set (0.002 sec)
+
+MariaDB [ejercicio_consola]> UPDATE productos SET nombre_articulo='tablet' WHERE codigo_articulo=3;
+Query OK, 1 row affected (0.006 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [ejercicio_consola]>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

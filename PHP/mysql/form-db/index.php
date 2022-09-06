@@ -33,8 +33,8 @@
 		}
 
 		if(!$errores){
-			$enviar_a = 'tunombre@tuempresa.com';
-			$asunto = 'Correo enviado desde miPagina.com';
+			$enviar_a = 'jaume.lozano@etif.es';
+			$asunto = 'Correo enviado desde el formulario PHP';
 			$mensaje_preparado = "De: $nombre \n";
 			$mensaje_preparado .= "Correo: $correo \n";
 			$mensaje_preparado .= "Mensaje: " . $mensaje;

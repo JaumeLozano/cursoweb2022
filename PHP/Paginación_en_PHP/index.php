@@ -32,13 +32,13 @@ $articulos = $articulos->fetchAll();
 
 // Comprobamos que haya articulos, sino entonces redirigimos.
 if (!$articulos) {
-	header('Location: http://localhost/tutoriales/curso_php/Practicas/paginacion/');
+	header('Location: http://localhost/cursoweb2022\PHP\Paginación en PHP');
 }
 
 // Calculamos el total de articulos, para despues conocer el numero de paginas de la paginacion.
 $totalArticulos = $conexion->query('SELECT FOUND_ROWS() as total');
-$totalArticulos = $totalArticulos->fetch()['total'];
-
+//no hay from por el que el query es directo y está yéndose directamente a la conexión. El fetch está guardando el resultado de la consulta en la variable.
+$totalArticulos = $totalArticulos->fetch()['total']; 
 // Calculamos el numero de paginas que tendra la paginacion.
 # Para esto dividimos el total de articulos entre los post por pagina
 $numeroPaginas = ceil($totalArticulos / $postPorPagina);

@@ -31,14 +31,14 @@
 				array(':id'=> $id)
 			);
 			//Otro paquete de información en un array del registro de la ID seleccionada por el formulario
-			$resultados = $statement->fetch();
+			$resultados = $statement->fetch(); //vinculamos los datos del $statement con $resultados
 			
 			//Como mostramos los datos
 			if($resultados){
 				echo "<p style='text-align:center'> El registro es:</br> ";
 				echo "ID:" . $resultados['id'] . ' - ' . $resultados['nombre']. ' - ' . $resultados['correo']. ' - ' . $resultados['mensaje'] ;
 				echo "</p>";
-
+			//como el caso de Statement es un array se pueden dividir los resultados. 
 			} 
 			//Si no hay datos en el registro
 			else {

@@ -56,7 +56,7 @@
 			//Aquí hay que revisar que la sentecia SQL es correcta. Si la sentencia e scorrecta lo ppondremos. 
 			echo "OK, sentencia correcta"
 			$statement->execute(
-				array(':nombre'=> $nombre, ':correo'=> $correo, ':mensaje'=> $mensaje)
+				array(':nombre'=> $nombre, 'jaume.lozano@etif.es'=> $correo, ':mensaje'=> $mensaje)
 			);
 
 		} catch(PDOException $e){

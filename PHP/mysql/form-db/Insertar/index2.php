@@ -4,16 +4,14 @@
 	$enviado = '';
 
 	if (isset($_POST['submit'])) {
-		//Recopilamos los datos que nos dan a traves del formulario por el metodo POST, lo recibimos en la variable array asociativo $_POST
 		$nombre = $_POST['nombre'];
 		$correo = $_POST['correo'];
 		$mensaje = $_POST['mensaje'];
-
-		// Sanear el nombre
+			//sanear (recibir textos y no nada más)
 		if (!empty($nombre)) {
 			$nombre = trim($nombre);
 		} else {
-			$errores .= 'Por favor escribe un nombre <br />';
+			$errores .= 'Por favor escribe un nombre <br />'; // el .= representa la concatenación
 		}
 
 		if (!empty($correo)) {
@@ -31,18 +29,18 @@
 			$mensaje = trim($mensaje);
 			$mensaje = stripslashes($mensaje);
 		} else {
-			$errores .= 'Por favor escribe el mensaje';
+			$errores .= 'Por favor escribe el mensaje <br />';
 		}
 
 		if(!$errores){
-			$enviar_a = 'magda.oliver@etif.es';
-			$asunto = 'Correo enviado desde la app de formulario de php';
+			$enviar_a = 'jaume.lozano@etif.es';
+			$asunto = 'Correo enviado desde el formulario PHP';
 			$mensaje_preparado = "De: $nombre \n";
 			$mensaje_preparado .= "Correo: $correo \n";
 			$mensaje_preparado .= "Mensaje: " . $mensaje;
 
-			// mail($enviar_a, $asunto, $mensaje_preparado);
-			$enviado = 'true';
+			//mail($enviar_a, $asunto, $mensaje_preparado);
+			$enviado= 'true'; //esta función es interesante porque le puedes decir a quien se lo envías. $enviar_a es a quien se lo envías, $asunto, es lo que le aparece. 
 		}
 
 	}
@@ -51,23 +49,18 @@
 
 	if ($enviado == 'true'){
 		try {
-			//Estableces una conexión a la Base de datos
 			$conexion = new PDO('mysql:host=localhost;dbname=form_db', 'root', '');
-			//Revisas si se ha conectado
-			echo "Todo OK conectado </br>" ;
-			//Insertar datos del formulario
+			echo "Todo OK conectado";
+			//Establecer correctamente la conexión 
 			$statement = $conexion->prepare('INSERT INTO usuarios_form VALUES (null, :nombre, :correo, :mensaje)');
-			//Revisar si la sentencia SQL es correcta
-			echo "OK sentencia correcta </br>";
+			//Aquí hay que revisar que la sentecia SQL es correcta. Si la sentencia e scorrecta lo ppondremos. 
+			echo "OK, sentencia correcta"
 			$statement->execute(
-				array(':nombre'=> $nombre, ':correo'=> $correo, ':mensaje'=> $mensaje)
+				array(':nombre'=> $nombre,':correo'=> $correo, ':mensaje'=> $mensaje)
 			);
-			//Revisar si se ha enviado todo OK
-			echo "OK Todo enviado";
 
 		} catch(PDOException $e){
 			echo "Error: " . $e->getMessage();
 		}
 	}
-	
 ?>

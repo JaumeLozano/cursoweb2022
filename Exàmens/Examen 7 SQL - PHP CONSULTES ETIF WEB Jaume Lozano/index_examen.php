@@ -7,7 +7,6 @@
 		//Recopilamos los datos que nos dan a traves del formulario por el metodo POST, lo recibimos en la variable array asociativo $_POST
 		$nombre = $_POST['nombre'];
 		$correo = $_POST['correo'];
-		$enviado = 'true';
 		/* $mensaje = $_POST['mensaje']; */
 /* 
 		// Sanear el nombre
